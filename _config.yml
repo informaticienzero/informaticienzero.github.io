@@ -1,14 +1,17 @@
 title: Informaticienzero
 description: >- # this means to ignore newlines until "baseurl:"
   Le blog d'un informaticien passionné de partage et d'échanges et surtout, pas si zéro que ça.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: ""
 
 markdown: kramdown
 theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 exclude:
   - Gemfile
   - Gemfile.lock
+
+paginate: 5
