@@ -1,0 +1,15 @@
+---
+layout: default
+title: Accueil
+permalink: /
+---
+
+<div>
+Welcome on my site ! I hope you'll like it.
+<ul>
+{% for post in site.posts %} 
+	<li>{{ post.date | date_to_string }} » <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %} 
+</ul>
+
+<div>
