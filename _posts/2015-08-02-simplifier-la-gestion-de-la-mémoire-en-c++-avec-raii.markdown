@@ -10,6 +10,8 @@ La gestion des ressources est un problème récurrent en informatique. En effet,
 
 Le C++, en raison de l'approche historique qui en est malheureusement faite dans beaucoup d'ouvrages, est utilisé par certains développeurs comme le C, en gérant les ressources de manière manuelle. Pourtant, il existe un idiome très simple et efficace que nous allons découvrir dans ce tutoriel. Alors oubliez vos ```new` et `delete` et découvrez ce que C++ offre.
 
+<!--excerpt-->
+
 *Un grand merci à [Davidbrcz](https://zestedesavoir.com/membres/voir/Davidbrcz/) pour son aide à l'amélioration de ce tutoriel, ainsi que tous ceux qui ont relevé des fautes (mention spéciale à [Dominus Carnufex](https://zestedesavoir.com/membres/voir/Dominus%2520Carnufex/)).*
 
 ## Gestion manuelle de la mémoire
