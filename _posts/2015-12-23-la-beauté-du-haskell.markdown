@@ -6,6 +6,8 @@ permalink: /:title/
 ---
 Il y a à peine une semaine, j'ai décidé de m'intéresser sérieusement aux langages fonctionnels (c'est à dire aller plus loin qu'un bonjour au monde). Comme j'aime les défis et que je n'ai pas envie d'être tenter de faire un peu d'impératif comme le permet un langage tel qu'OCaml, j'ai sauté dans le grand bain directement avec un l**angage fonctionnel pur** : [Haskell](https://fr.wikipedia.org/wiki/Haskell).
 
+<!--excerpt-->
+
 C'est vraiment quelque chose de déroutant, je dois l'admettre. Mais je pense que ça sera un excellent défi en plus de m'apprendre à réfléchir autrement. Et puis, les lambdas, que j'utilise tant en C++ et en C#, ne sont-elles pas tirées de la programmation fonctionnelle ? Enfin, j'ai toujours été attiré par les mathématiques, donc étudier toute la théorie derrière ça, même si ça doit être du lourd, peut m'intéresser.
 
 Pour conclure, j'ai quelques liens pour ceux qui seraient tentés par ce langage.

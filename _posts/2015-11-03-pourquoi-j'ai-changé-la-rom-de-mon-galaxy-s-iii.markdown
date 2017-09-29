@@ -6,6 +6,8 @@ permalink: /:title/
 ---
 Je ne vais pas écrire un tutoriel sur comment le faire, il en existe déjà beaucoup. Non, je préfère parler de mes motivations. Parce que même si les risques ne sont pas élevés, on fait sauter la garantie, avec une potentielle perte des données voire une perte totale du téléphone. Mais les avantages surpassent largement les inconvénients.
 
+<!--excerpt-->
+
 # Virer les applications installées par défaut
 
 Non parce que les applications Samsung, d'accord, mais hein ! Non seulement elles sont inutiles, et en plus je ne m'en servais pas. Pareil pour la plupart des applications Google. En fait, la seule que j'utilise, c'est le Play Store. En changeant de ROM, on peut choisir les **gapps** que l'on veut installer. Enfin, ceci est également valable pour les applications des opérateurs, du genre SFR, Orange, etc.

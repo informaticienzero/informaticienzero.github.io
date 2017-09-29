@@ -6,6 +6,8 @@ permalink: /:title/
 ---
 J’aime le C++. C’est un de mes langages préférés. Malheureusement, c’est un **langage trop souvent très mal enseigné**. Je pense à tous ces cours datant de Mathusalem faits par des personnes qui croient encore que le C++ n’est qu’un bête sur-ensemble de C avec des classes (un peu comme [cette abomination là](https://openclassrooms.com/courses/du-c-au-c), qui vient ... du même site, tiens donc). Mais il y a aussi d’autres cours qui, sans tomber dans cet extrême, enseignent de mauvaises pratiques, méprisant l’évolution du langage depuis 2011 et forçant ainsi un débutant à désapprendre pour reconstruire avec des ressources de qualité et à jour. Ça, c’est le cas du tutoriel d’OpenClassrooms.
 
+<!--excerpt-->
+
 Avant toute chose : **on s’adresse à des débutants qui veulent apprendre à programmer**, pas à des professionnels qui connaissent bien la question et savent quand enfreindre certaines règles. Donc pas la peine de me sortir que les pointeurs nus sont utiles pour interfacer avec le C, je le sais et ce n’est pas l’objet de ce post.
 
 # Le naturisme des pointeurs et la dynamique allocation

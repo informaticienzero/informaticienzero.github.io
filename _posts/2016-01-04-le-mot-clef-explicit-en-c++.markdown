@@ -9,6 +9,8 @@ J'ai eu l'occasion d'aider quelqu'un récemment sur [Zeste de Savoir](https://ze
 *   Le(s) constructeur(s) d'une classe.
 *   La surcharge de l'opérateur de conversion.
 
+<!--excerpt-->
+
 Il s'agit dans tous les cas de dire au compilateur de **ne PAS faire de conversion implicite** lors de l'appel d'une fonction. Voici un exemple typique tiré (et légèrement adapté) de [StackOverflow](https://stackoverflow.com/questions/121162/what-does-the-explicit-keyword-mean).
 
 {% highlight cpp %}

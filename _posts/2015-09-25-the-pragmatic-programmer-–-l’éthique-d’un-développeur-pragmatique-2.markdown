@@ -4,7 +4,9 @@ title: "The Pragmatic Programmer – L’éthique d’un développeur pragmatiqu
 date: 2015-09-25 22:49:46
 permalink: /:title/
 ---
-Dans la [première partie](2015-08-17-the-pragmatic-programmer---l'éthique-d'un-développeur-pragmatique-1.markdown) de cet article, nous avons abordé plusieurs points. Sous la métaphore d'un chat mangeur de code source, nous avons compris qu'**un bon programmeur ne fournit pas de mauvaises excuses mais plutôt qu’il doit fournir des solutions**. D'ailleurs, c'est lui qui prend en main sa carrière, ses projets et son travail quotidien, même si cela lui demande **humilité** et **modestie**.
+Dans la [première partie](the-pragmatic-programmer---l'éthique-d'un-développeur-pragmatique-1) de cet article, nous avons abordé plusieurs points. Sous la métaphore d'un chat mangeur de code source, nous avons compris qu'**un bon programmeur ne fournit pas de mauvaises excuses mais plutôt qu’il doit fournir des solutions**. D'ailleurs, c'est lui qui prend en main sa carrière, ses projets et son travail quotidien, même si cela lui demande **humilité** et **modestie**.
+
+<!--excerpt-->
 
 Ensuite, nous avons examiné l'importance de corriger la moindre vitre brisée dans le projet. Ne pas le faire peut couler un projet si bien parti. D'ailleurs, depuis la publication de la première partie de cet article, un [commitstrip](http://www.commitstrip.com/fr) est sorti, s'amusant d'un problème pas si éloigné.
 

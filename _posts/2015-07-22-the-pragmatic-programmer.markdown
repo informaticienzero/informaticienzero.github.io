@@ -6,6 +6,8 @@ permalink: /:title/
 ---
 Il y a de cela quelques mois que l'on m'a prêté ce livre de **David Thomas** et **Andrew Hunt** sans que je ne prenne vraiment le temps de le lire. Mais cette fois, c'est décidé, je m'y mets sérieusement. Et afin de rendre cette lecture utile et efficace, j'ai décidé de m'en faire un résumé pour en sortir les points principaux. Mais pourquoi n'en ferais-je pas alors profiter les autres ?
 
+<!--excerpt-->
+
 ![](https://images-na.ssl-images-amazon.com/images/I/41BKx1AxQWL._SX258_BO1,204,203,200_.jpg) Couverture du livre The Pragmatic Programmer.
 
 Tout d'abord, commençons par le commencement : que veux dire le terme pragmatique ? Selon une définition, quelqu'un de pragmatique considère **la valeur pratique des choses et expérimente**. Cette définition s'oppose à celle de théoricien. Un programmeur faisant preuve de pragmatisme est donc bien aux faits de la réalité du métier et de la pratique au quotidien du développement.

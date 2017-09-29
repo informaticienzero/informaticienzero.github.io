@@ -6,6 +6,8 @@ permalink: /:title/
 ---
 Il y a peu de temps, j'ai achevé mes deux années de formation au sein de l'IUT Informatique de Villetaneuse. Tout n'a pas été blanc ni n'a été noir. Disons simplement que je suis heureux d'en avoir fini avec la scolarité et d'être désormais à plein temps dans le monde du travail. Mais avant de conclure sur toutes ces années passées sur les bancs de l'école, faisons un récapitulatif.
 
+<!--excerpt-->
+
 # L'alternance
 
 J'ai eu la grande chance de pouvoir faire mes deux années d'étude en alternance. Non seulement j'avais l'enseignement théorique sur les bancs de l'université, mais j'ai pu le confronter avec la réalité du terrain en passant un mois sur deux en entreprise. Cela m'a donné également une expérience précieuse : je ne suis pas ignorant de ce qu'est une entreprise, des écarts qu'il peut y avoir avec la théorie, du rythme qu'elle impose, etc. Et puis disons le franchement : c'est cool d'être payé tous les mois !

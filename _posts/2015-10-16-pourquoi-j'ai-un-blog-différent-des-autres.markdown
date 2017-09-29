@@ -4,7 +4,9 @@ title: "Pourquoi j'ai un blog différent des autres ?"
 date: 2015-10-16 22:19:58
 permalink: /:title/
 ---
-J'aime les blogs. Énormément. C'est un formidable espace de partage, d'apprentissage, d'échanges. Et certains sont vraiment de bonne qualité. Mais j'ai pu voir plusieurs choses sur de nombreux blogs qui ne me plaisent pas, voire pas du tout. Cet article est là pour me permettre de partager mon opinion, mais aussi comme une sorte de contrat que je passe avec chaque lecteur : **ce que je décris ici, jamais, JAMAIS, je ne le ferai sur mon blog**. Et je compte sur ceux qui aiment ce site pour me le rappeler, à chaque écart ou envie de se détourner de mes principes.
+J'aime les blogs. Énormément. C'est un formidable espace de partage, d'apprentissage, d'échanges. Et certains sont vraiment de bonne qualité. Mais j'ai pu voir plusieurs choses sur de nombreux blogs qui ne me plaisent pas, voire pas du tout. Cet article est là pour me permettre de partager mon opinion, mais aussi comme une sorte de contrat que je passe avec chaque lecteur : **ce que je décris ici, jamais, JAMAIS, je ne le ferai sur mon blog**.
+
+<!--excerpt-->
 
 Et avant d'aller plus loin, dans les diverses pratiques ci-dessous, je ne donnerai ni nom, ni lien. Je ne suis pas là pour dénigrer un blog ou un site ni lui nuire. Et puis d'ailleurs, tu as tout à fait le droit d'être en désaccord avec mes propos et c'est ton droit.
 

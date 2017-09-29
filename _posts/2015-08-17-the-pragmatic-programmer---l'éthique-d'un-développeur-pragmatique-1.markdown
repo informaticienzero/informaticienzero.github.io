@@ -6,6 +6,8 @@ permalink: /:title/
 ---
 Avant d'apprendre à être un développeur pragmatique, il faut examiner ceux qui le sont pour comprendre leur attitude, leur façon de faire et de penser. Le premier chapitre du livre se concentre dessus et le fait bien. En effet, plutôt que de nous jeter à la figure ce que fait un tel développeur ou de nous noyer avec des notions théoriques, ce chapitre regorge de métaphores et d'illustrations. Examinons-les.
 
+<!--excerpt-->
+
 ## Le chat a mangé le code source
 
 Peut-être que les anglo-saxons font du chat ce que les auteurs de bandes dessinées franco-belges font du chien, ce célèbre mangeur de devoirs ou de bulletins trimestriels (Boule et Bill, si vous m'entendez). En tout cas, dans les deux cas, on se rend bien compte que jeter la culpabilité sur un animal est bien souvent ridicule (et source de gags dans la bande dessinée). Qui irait-voir son supérieur en disans « *Désolé chef, j'étais en train de travailler sur le projet hier mais mon chat a tout mangé* » ? Mais pourtant, de telles excuses sont sorties, d'une façon moins ridicule certes, mais tout aussi désespérante : « *Le code source a disparu suite au crash du disque dur sur lequel il était stocké.* »
