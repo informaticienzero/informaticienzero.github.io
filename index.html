@@ -10,7 +10,7 @@ title: Accueil
     <span class="date">{{ post.date }}</span>
   </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.content | truncatewords:75 }}
   </div>
 {% endfor %}
 
