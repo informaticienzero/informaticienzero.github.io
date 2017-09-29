@@ -378,6 +378,7 @@ int main()
 	return 0;
 }
 {% endhighlight %}
+
 {% highlight shell %}
 Acquisition de la ressource n°1
 Acquisition de la ressource n°2
@@ -502,7 +503,7 @@ Ces *templates* sont à utiliser le plus possible car ils permettent d'écrire u
 
 Et en plus, le mieux du mieux, on peut définir des *deleters*, c'est-à-dire définir comment le pointeur va libérer sa ressource. Il suffit simplement de créer une classe sur ce modèle que l'on passera ensuite en argument à notre pointeur intelligent.
 
-```
+{% highlight cpp %}
 class Deleter
 {
 	public:
@@ -631,6 +632,7 @@ int main()
 	return 0;
 }
 {% endhighlight %}
+
 {% highlight shell %}
 Valeur de f : 42
 {% endhighlight %}
@@ -753,6 +755,7 @@ fn main() {
 	// `_boxed_int` gets destroyed here, memory gets freed
 }
 {% endhighlight %}
+
 {% highlight shell %}
 $ rustc raii.rs && valgrind ./raii
 ==26873== Memcheck, a memory error detector
