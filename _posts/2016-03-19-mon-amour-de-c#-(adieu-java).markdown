@@ -4,7 +4,7 @@ title: "Mon amour de C# (adieu Java)"
 date: 2016-03-19 00:47:19
 permalink: /:title/
 ---
-J'utilise C# tous les jours au travail. Bon d'accord, la version 3 avec Visual Studio 2008 et le framework .NET 3.5, ce qui donne plus l'impression de faire de l'archéologie que de la programmation. Mais j'ai aussi Visual Studio 2015, Community certes, mais très bien pour faire tout un tas de tests ou de projets open-sources. En plus, comme ils ne concernent pas mon entreprise, je ne tombe pas sous la limitation à 250 PC ou 1 million de chiffre d'affaire. Bref. Tout ça pour dire que **plus j'utilise C# et plus je l'apprécie **et ce** beaucoup plus que Java**.
+J'utilise C# tous les jours au travail. Bon d'accord, la version 3 avec Visual Studio 2008 et le framework .NET 3.5, ce qui donne plus l'impression de faire de l'archéologie que de la programmation. Mais j'ai aussi Visual Studio 2015, Community certes, mais très bien pour faire tout un tas de tests ou de projets open-sources. En plus, comme ils ne concernent pas mon entreprise, je ne tombe pas sous la limitation à 250 PC ou 1 million de chiffre d'affaire. Bref. Tout ça pour dire que **plus j'utilise C# et plus je l'apprécie** et ce **beaucoup plus que Java**.
 
 <!--excerpt-->
 
