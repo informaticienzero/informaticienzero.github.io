@@ -582,7 +582,7 @@ Il s’agit d’une pratique courante que vous pourrez voir dans certains codes.
 
 Ce n'est pas une bonne pratique spécifique au RAII, mais dès qu'une ressource est censée être constante, alors il faut impérativement utiliser le mot-clef `const`. Cela donne des garanties à l'utilisateur et, couplé avec des références, permet un passage en argument plus rapide.
 
-```
+{% highlight cpp %}
 void bar(std::string const & data)
 {
 	// Ici, on est certain que data ne sera pas modifiée.
