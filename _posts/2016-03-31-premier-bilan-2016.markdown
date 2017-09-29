@@ -1,0 +1,38 @@
+---
+layout: default
+title: "Premier bilan 2016"
+date: 2016-03-31 22:07:08
+permalink: /:title/
+---
+Presque deux mois après avoir [annoncé la couleur](http://www.informaticienzero.com/la-programmation-de-lannee-2016/) pour cette année, il est temps que je dresse un petit bilan. L'idée est de voir les domaines où j'ai le plus progressé et ceux où ça n'avance pas. Je vais également en profiter pour me fixer des objectifs. On y va ! Tata Yoyo !
+
+<!--excerpt-->
+
+## C++
+
+Sur ce point, je n'ai pas vraiment avancé. J'ai pu finir tous les exercices faciles de [CodinGame](https://www.codingame.com/start), mais j'avoue que face à des langages comme C# ou Python, la bibliothèque standard de C++ est vraiment légère. C'est en voulant faire un exercice moyen à base de graphes que ça m'a découragé et je n'ai pas vraiment touché au C++ depuis.
+
+C'est un langage puissant que j'affectionne, mais je pense que je ne l'utiliserai presque plus pour résoudre des défis sur CodinGame. En revanche, je compte me servir de [HackerRank](https://www.hackerrank.com/domains) pour continuer à travailler sur C++.
+
+## Python
+
+Là, par contre, j'ai déjà avancé un peu plus. En effet, j'ai plusieurs projets que j'aimerais mener à bon ports qui utilisent Django. Ça me motive donc à m'investir dans ce cher serpent.
+
+J'ai aussi un besoin à résoudre et je pense que Python est le meilleur choix. En effet, j'aimerai, lorsque je trouve une nouvelle image, comparer celle-ci à mes centaines d'avatars pour trouver si elle existe déjà, afin de ne plus avoir à chercher manuellement. Vu la simplicité des exemples avec OpenCV, je m'oriente vers Python comme langage pour ce projet.
+
+## Haskell
+
+Rien de neuf sous le soleil, je n'y ai pas touché depuis presque 4 mois. Il faut que je m'y mette, vraiment. Surtout que j'ai trouvé [un autre cours](http://gorgonite.developpez.com/livres/traductions/haskell/gentle-haskell/) en français. En plus, le site [Exercism.io](http://exercism.io/) propose des dizaines d'exercices à résoudre en Haskell. Je dois examiner tout ça, à tête reposée.
+
+## Les autres langages que j'avais abordé
+
+De tous ceux que j'ai cité, je n'ai avancé que sur **D** et sur **C#.NET**. Pour le premier, encore une fois, rien de transcendant. J'ai tout de même réussi à configurer IntelliJ donc maintenant, il ne reste plus qu'à coder avec. Pour le deuxième, je l'utilise au travail tous les jours. J'ai pu terminer mon projet sur les [pages blanches](https://github.com/informaticienzero/Pages-blanches), bien qu'il soit perfectible et sans aucun doute sujet à améliorations. Je ne l'utilise pas en dehors du travail car il n'y a pas Visual Studio sous GNU/Linux et c'est vraiment un gros manque.
+
+## Ce sur quoi je compte travailler en plus
+
+*   Si j'ai des connaissances basiques sur le contrôle de code source à travers GitHub et un IDE, je ne connais quasiment rien à **git**. Je vais donc sérieusement me former à son utilisation afin d'avoir de bonnes bases.
+*   Je pense que, malgré deux années d'université, j'ai toujours des failles et des lacunes en **algorithmique**. J'avoue ne toujours pas savoir représenter et manipuler des graphes ou des arbres binaires. Je dois combler ce manque.
+*   Contribuer à **StackOverflow**. [Je me suis inscrit](http://stackoverflow.com/users/6060256/informaticienzero) il y a peu, mais je sens qu'avec ce site, je ne peux que progresser et apprendre des réponses des autres. Il faut donc que je participe au mieux de ce que je peux.
+*   Apprendre les bases de **Docker**. C'est une technologie montante, alors j'aimerai sauter dans le train dès maintenant. D'autant qu'Amazon propose, sur sa plateforme, le déploiement basé sur un conteneur Docker.
+
+Pfiouff, ça fait beaucoup ! Mais il faut se fixer des objectifs pour avancer. L'avantage de les avoir écrits, c'est qu'ils ne me trotteront plus dans la tête désormais. Je vais pouvoir travailler à leur réalisation.
