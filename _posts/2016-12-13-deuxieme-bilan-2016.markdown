@@ -4,7 +4,7 @@ title: "Deuxième bilan 2016"
 date: 2016-12-13 12:27:41
 permalink: /:title/
 ---
-Nous sommes mi-décembre 2016, pourquoi ne pas faire le bilan de l'année ? Pour rappel, voici [ce que j'avais prévu](la-programmation-de-lannee-2016). J'avais fais [un premier bilan](premier-bilan-2016) le 31 mars, il est temps de voir la progression. Mais avant, j'aimerai revenir sur une phrase que j'avais écris au début de l'année.
+Nous sommes mi-décembre 2016, pourquoi ne pas faire le bilan de l'année ? Pour rappel, voici [ce que j'avais prévu](la-programmation-de-l'année-2016). J'avais fais [un premier bilan](premier-bilan-2016) le 31 mars, il est temps de voir la progression. Mais avant, j'aimerai revenir sur une phrase que j'avais écris au début de l'année.
 
 > Je ne vais pas te le cacher, ces derniers temps, **je n’ai plus trop la flamme du développeur.**
 
