@@ -12,7 +12,7 @@ Ni une ni deux, la station [Argentine](https://fr.wikipedia.org/wiki/Argentine_%
 
 J'ai la ligne 12 présente à la station Saint-Lazare, la ligne 8 à la station [Opéra](https://fr.wikipedia.org/wiki/Op%C3%A9ra_%28m%C3%A9tro_de_Paris%29) ; à la station Concorde, les deux croisent la ligne 1. J'ai donc envie de tout relier. Ni une ni deux, je creuse un tunnel perpendiculairement à la sortie de la station Opéra (pour la ligne 8) et commence à aménager la station [Madeleine](https://fr.wikipedia.org/wiki/Madeleine_%28m%C3%A9tro_de_Paris%29), où la ligne 14 croise également la 8 et la 12. Mais en creusant la sortie, je me rends compte que je suis juste à côté de la station Tuileries. « Mais où est le problème ? » se demandent peut-être ceux qui n'ont pas l'usage du métro parisien. La réponse en image.
 
-![La station Madeleine n'est pas du tout collée à Tuileries en vrai.](https://github.com/informaticienzero/informaticienzero.github.io/blob/master/Images/madeleine-tuileries.jpg)
+![La station Madeleine n'est pas du tout collée à Tuileries en vrai.](https://raw.githubusercontent.com/informaticienzero/informaticienzero.github.io/master/Images/madeleine-tuileries.jpg)
 
 Et vlam ! tout mon travail tombe en ruine tel un château de cartes qui aurait croisé la route d'un ventilateur surexcité. Mais pourquoi ?
 
