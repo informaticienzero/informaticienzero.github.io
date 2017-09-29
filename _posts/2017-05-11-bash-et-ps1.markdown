@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Bash et PS1"
+date: 2017-05-11 07:15:00
+permalink: /:title/
+---
+Je trouve ça tellement cool de pouvoir personnaliser Bash que je vais noter commencer j'ai défini `PS1`. C'est tout simple. On commence par un crochet ouvrant, on affiche le nom d'utilisateur en vert, puis @ en blanc, puis le hostname en rouge. On ferme les crochets, puis, de nouveau entre crochets, l'heure format 24h avec secondes. On met deux-point, un espace, puis en bleu le répertoire courant, avant de conclure par un ultime espace puis le duo $/#.
+
+{% highlight bash %}
+export PS1="[\\[\\e[32m\\]\\u\\[\\e[m\\]@\\[\\e[31m\\]\\h\\[\\e[m\\]][\\[\\e[37m\\]\\t\\[\\e[m\\]]:\\[\\e[34m\\] \\[\\e[m\\]\\[\\e[34m\\]\\W\\[\\e[m\\] \\\\$ "
+{% endhighlight %}
+
+Je n'aurai bien entendu pas réussi seul sans [ce superbe site](http://ezprompt.net/), que je remercie beaucoup.

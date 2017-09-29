@@ -1,0 +1,7 @@
+---
+layout: default
+title: "Déception"
+date: 2017-09-22 15:27:21
+permalink: /:title/
+---
+Tel pourrait être le mot résumant le mieux mon sentiment cette semaine. Après une semaine entière passée à intégrer TypeScript à un projet ASP.NET, à peaufiner, à refactoriser et à nettoyer pour avoir un code propre et simple à utiliser, TFS Build et les nombreuses erreurs totalement débiles auront eu raison de moi. Tout à été annulé à cause d'un build moisi qui ne faisait rien de ce qu'on lui disait. C'est vraiment dommage, tant d'efforts pour rien.
