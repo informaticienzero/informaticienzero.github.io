@@ -8,7 +8,7 @@ permalink: /:title/
 
 La gestion des ressources est un problème récurrent en informatique. En effet, on ne dispose que de ressources limitées : RAM, disques durs, nombre de calculs par seconde, etc. Et aujourd'hui, il faut admettre qu'on charge de plus en plus de ressources qui prennent de la place. Il faut donc les gérer efficacement. Certains langages, comme le C, obligent l'utilisateur à allouer et libérer de la mémoire pour les ressources et il faut dire que c'est contraignant.
 
-Le C++, en raison de l'approche historique qui en est malheureusement faite dans beaucoup d'ouvrages, est utilisé par certains développeurs comme le C, en gérant les ressources de manière manuelle. Pourtant, il existe un idiome très simple et efficace que nous allons découvrir dans ce tutoriel. Alors oubliez vos ```new` et `delete` et découvrez ce que C++ offre.
+Le C++, en raison de l'approche historique qui en est malheureusement faite dans beaucoup d'ouvrages, est utilisé par certains développeurs comme le C, en gérant les ressources de manière manuelle. Pourtant, il existe un idiome très simple et efficace que nous allons découvrir dans ce tutoriel. Alors oubliez vos `new` et `delete` et découvrez ce que C++ offre.
 
 <!--excerpt-->
 
@@ -18,7 +18,7 @@ Le C++, en raison de l'approche historique qui en est malheureusement faite dans
 
 Bien souvent, dès qu'on manipule des ressources externes, du type image à charger et afficher, connexion à une base de données, ou à un serveur, ou autres, il est inévitable de devoir réserver de la mémoire de façon dynamique. Pour ceux qui ont fait du C, vous pensez sans doute **aux pointeurs** et vous avez bien raison. Prenons donc un bête exemple : on se connecte à une base de données, on récupère un nombre fixé de noms de trains, on ouvre un fichier, on le verrouille, on travaille ensuite dessus avant de tout refermer comme il se doit.
 
-```
+{% highlight c %}
 void get_infos_from_db()
 {
 	SGBD * sgbd = SGBD_Init("trains.db");
@@ -50,11 +50,11 @@ void get_infos_from_db()
 
 	SGBD_release(sgbd);
 }
-```
+{% endhighlight %}
 
 Pourtant, ce code est juste une horreur à éviter. Pourquoi ? Parce qu'aucune vérification n'est faite. Si une seule opération échoue, on est bon pour un *segfault*. Alors, sécurisons ce code (merci à [Taurre ](https://zestedesavoir.com/membres/voir/Taurre/)).
 
-```
+{% highlight c %}
 void darray_delete(void ** self, unsigned n)
 {
 	if (self != NULL)
@@ -164,13 +164,13 @@ void get_infos_from_db(void)
 #undef NTRAINS
 #undef TRAIN_MAX
 #undef BUFFER_MAX
-```
+{% endhighlight %}
 
 Quelle plaie à écrire ! Non seulement c'est long, mais en plus, c'est plus complexe à comprendre, on peut avoir oublié certains cas, bref, un cauchemar. Et encore, on aurait pu avoir à initialiser plus de ressources encore.
 
 Peut-être certains d'entre vous pensent que `goto`, c'est un héritage du C dépassé, et qu'en C++ on devrait plutôt utiliser les exceptions. Soit, essayons.
 
-```
+{% highlight cpp %}
 void get_infos_from_db()
 {
 	const int nb_trains = 2;
@@ -277,7 +277,7 @@ void get_infos_from_db()
 
 	SGBD_release(sgbd);
 }
-```
+{% endhighlight %}
 
 Finalement, ce code ne nous apporte aucun avantage par rapport au précédent : toujours aussi gros, toujours aussi illisible, et nous ne sommes même pas sûrs de couvrir tous les chemins possibles : un oubli est possible, une fonction apparemment inoffensive peut lancer une exception, bref, toujours un cauchemar à maintenir.
 
@@ -300,7 +300,7 @@ Un constructeur ne peut acquérir, au maximum, qu'une seule ressource non encaps
 
 Voyons sans plus tarder comment appliquer ce principe à notre code précédent. Commençons par encapsuler nos ressources dans des classes, en prennant par exemple le SGBD.
 
-```
+{% highlight cpp %}
 class Sgbd_Capsule
 {
 	public:
@@ -325,11 +325,11 @@ class Sgbd_Capsule
 	private:
 		SGBD * m_sgbd;
 };
-```
+{% endhighlight %}
 
 Maintenant, nous pouvons écrire du code aussi simple que celui ci-dessous (et nous verrons que nous pouvons faire encore plus simple dans la section suivante).
 
-```
+{% highlight cpp %}
 int foo()
 {
 	Sgbd_Capsule sgbd("trains.db");
@@ -340,11 +340,11 @@ int foo()
 
 	return 42;
 }
-```
+{% endhighlight %}
 
 Les ressources sont libérées **à la sortie du bloc dans lequel nous les avons acquises**, c'est-à-dire ici en sortant de la fonction. Voyez par vous-mêmes l'exemple suivant.
 
-```
+{% highlight cpp %}
 class Test
 {
 	public:
@@ -377,8 +377,8 @@ int main()
 	}
 	return 0;
 }
-```
-```
+{% endhighlight %}
+{% highlight shell %}
 Acquisition de la ressource n°1
 Acquisition de la ressource n°2
 Acquisition de la ressource n°3
@@ -389,7 +389,7 @@ Acquisition de la ressource n°5
 Libération de la ressource n°5
 Libération de la ressource n°2
 Libération de la ressource n°1
-```
+{% endhighlight %}
 
 ### Gestion des erreurs
 
@@ -401,7 +401,7 @@ Si on ne peut acquérir une ressource, alors l'objet ne peut être construit. Le
 
 Lors de la construction d'un objet, si jamais le constructeur lance une exception, alors toute la mémoire réservée pour les membres sera libérée. Si jamais le constructeur a alloué de la mémoire dynamiquement de quelque manière que ce soit, alors cette dernière n'est pas libérée.
 
-```
+{% highlight cpp %}
 class Sgbd_Capsule
 {
 	public:
@@ -430,7 +430,7 @@ class Sgbd_Capsule
 	private:
 		SGBD * m_sgbd;
 };
-```
+{% endhighlight %}
 
 Enfin, un conseil important que je répète : si on a plusieurs ressources à acquérir dans un même constructeur, il vaut mieux que chaque ressource soit encapsulée dans sa propre capsule RAII ; ainsi, chaque ressource sera libérée par son propre destructeur et on s'évite bien des soucis.
 
@@ -458,7 +458,7 @@ Pourtant, C++ ne fournit pas de mot-clef ou de construction similaire à celles 
 
 La bibliothèque standard utilise énormément cet idiome, à travers des noms qui vous sont certainement familliers : `std::string`, `std::array`, `std::vector`, `std::ifstream`, etc. Quand on y réfléchit, a-t-on déjà libéré manuellement un `std::string` ? Non, car c'est fait automatiquement pour nous. Et pour vous montrer à quel point la bibliothèque standard est infiniment supérieure à tout ce qu'on pourait faire manuellement, reprenons notre code de début en utilisant les mécanismes standards.
 
-```
+{% highlight cpp %}
 void get_infos_from_db()
 {
 	const int nb_trains = 2;
@@ -478,7 +478,7 @@ void get_infos_from_db()
 
 	lock_release(lock);
 }
-```
+{% endhighlight %}
 
 N'est-ce pas plus clair à lire et à comprendre ? Premier point à retenir : **toujours utiliser au maximum la bibliothèque standard**. Pourquoi se frustrer à faire un code comme on ferait en C quand on peut profiter de mécanismes éprouvés, performants et sûrs comme ceux proposés par la bibliothèque standard ? Donc faites-y appel le plus possible, ce sera du temps et du confort de gagnés.
 
@@ -512,11 +512,11 @@ class Deleter
 			/* Opérations diverses pour libérer la ressource */
 		}
 };
-```
+{% endhighlight %}
 
 Et comme un exemple vaut mille explications, utilisons ce principe avec notre SGBD et notre mécanisme de verrouillage qui se prêtent bien au jeu. Mais comme rien n'est parfait, les fonctions `std::make_shared<T>` et `std::make_unique<T>` ne prennent pas de *deleter* en argument. Il nous faut passer par la construction classique.
 
-```
+{% highlight cpp %}
 class SGBD_deleter
 {
 	public:
@@ -552,7 +552,7 @@ void get_infos_from_db()
 
 	do_some_stuff(trains_name, file, lock);
 }
-```
+{% endhighlight %}
 
 Les pointeurs intelligents nous permettent également d'éviter le problème du constructeur qui alloue lui-même de la mémoire que nous avons vu dans la section précédente. En effet, les pointeurs intelligents seront bien libérés même si l'on rencontre une exception. Donc utilisez-les dès que vous pouvez, quite à réécrire une version fonctionelle des pointeurs intelligents ou utiliser Boost si vous ne pouvez pas compiler en C++11 / C++14.
 
@@ -562,7 +562,7 @@ Deuxième point à retenir : chaque fois qu'il est nécessaire d'utiliser des po
 
 L'idéal, quand on gère des ressources, est de les **libérer dès que possible**. Non seulement cela est obligatoire dans certains cas (afin de ne pas faire attendre un processus trop longtemps pour ouvrir un fichier par exemple), mais en plus cela permet de soulager le système. Comment traduire cette bonne pratique en utilisant l’idiome RAII ? Eh bien, il faut que l’on détruise nos objets s’occupant des ressources le plus vite possible, ce qui est possible en utilisant des blocs d'instructions.
 
-```
+{% highlight cpp %}
 int value;
 
 { // Début du bloc d’instructions
@@ -573,7 +573,7 @@ int value;
 } // Fin du bloc d’instruction : appel du destructeur du fichier
 
 value = value * 4;
-```
+{% endhighlight %}
 
 Il s’agit d’une pratique courante que vous pourrez voir dans certains codes. Et bien entendu, le corolaire : **ne déclarez vos objets que quand vous en avez besoin** et pas avant. Alors oubliez les réflexes du C89 qui consistent à déclarer toutes les variables au début d'un bloc et ne le faites que pour un usage immédiat (sauf exception).
 
@@ -587,11 +587,11 @@ void bar(std::string const & data)
 	// Ici, on est certain que data ne sera pas modifiée.
 	// On utilise le passage par référence pour éviter une recopie inutile.
 }
-```
+{% endhighlight %}
 
 D'ailleurs, petite astuce (merci [Herb Sutter](http://herbsutter.com/2013/04/05/complex-initialization-for-a-const-variable/)), si l'on veut déclarer un objet constant alors que ses paramètres dépendent de conditions, on peut y arriver grâce aux lambdas.
 
-```
+{% highlight cpp %}
 #include <iostream>
 
 class Test
@@ -630,10 +630,10 @@ int main()
 
 	return 0;
 }
-```
-```
+{% endhighlight %}
+{% highlight shell %}
 Valeur de f : 42
-```
+{% endhighlight %}
 
 ## Et dans les autres langages ?
 
@@ -643,7 +643,7 @@ Bien que le C++ ait été le précurseur et le plus grand utilisateur de l'idiom
 
 Bien que cette possibilité soit offerte par une extension de GCC et donc non standard, elle mérite le détour et peut être intéressante pour ceux dont les applications ne seront compilées que par GCC. Il s'agit de l'attribut `cleanup`. Voici un exemple tiré de la [page](https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization) Wikipédia consacrée au RAII.
 
-```
+{% highlight c %}
 static inline void fclosep(FILE ** fp)
 {
 	if (*fp)
@@ -658,13 +658,13 @@ void example_usage()
 
 	/* logfile est correctement fermé sans appel explicite à fclose */
 }
-```
+{% endhighlight %}
 
 ### Avec D
 
 Le D fournit trois méthodes pour permettre la libération des ressources, dont une identique à celle utilisée en C++ : le couple constructeur / destructeur d'une classe. Les exemples suivants sont tirés du [site officiel](http://dlang.org/exception-safe.html).
 
-```
+{% highlight d %}
 class Lock
 {
 	Mutex m;
@@ -687,11 +687,11 @@ void abc()
 	auto l = scoped!Lock(new Lock(m));
 	foo();
 }
-```
+{% endhighlight %}
 
 La seconde façon se rapproche de celle de Java avec un `try finally`.
 
-```
+{% highlight d %}
 void abc()
 {
 	Mutex m = new Mutex;
@@ -705,11 +705,11 @@ void abc()
 		unlock(m);  // unlock the mutex
 	}
 }
-```
+{% endhighlight %}
 
 Enfin, il existe une troisième méthode, originale par rapport aux deux autres : `scope(exit)`. Tout le code qui sera placé après cette instruction sera exécuté peu importe si la fonction se termine normalement ou si une exception est lancée. Elle se décline également sous deux autres formes : `scope(failure)` où le code ne sera exécuté qu'en cas d'exception et `scope(success)` où le code sera exécuté en cas de déroulement normal. La [documentation](http://dlang.org/statement.html#ScopeGuardStatement) complètera mes explications.
 
-```
+{% highlight d %}
 void abc()
 {
 	Mutex m = new Mutex;
@@ -719,13 +719,13 @@ void abc()
 
 	foo();                  // do processing
 }
-```
+{% endhighlight %}
 
 ### Avec Rust
 
 Rust, langage développé par la fondation Mozilla, utilise le RAII de la même manière que C++. Et comme un code est plus parlant, voici celui tiré de [la page](http://rustbyexample.com/raii.html) consacrée au RAII avec Rust.
 
-```
+{% highlight rust %}
 fn create_box() {
 	// Allocate an integer in the heap
 	let _function_box = box 3i;
@@ -752,8 +752,8 @@ fn main() {
 
 	// `_boxed_int` gets destroyed here, memory gets freed
 }
-```
-```
+{% endhighlight %}
+{% highlight shell %}
 $ rustc raii.rs && valgrind ./raii
 ==26873== Memcheck, a memory error detector
 ==26873== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
@@ -769,7 +769,7 @@ $ rustc raii.rs && valgrind ./raii
 ==26873==
 ==26873== For counts of detected and suppressed errors, rerun with: -v
 ==26873== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)
-```
+{% endhighlight %}
 	
 Nous voilà arrivés à la fin de ce tutoriel qui, je l'espère, vous en aura appris un peu plus sur C++. Bien entendu, le RAII n'est pas parfait : le pire qui puisse arriver est une erreur dans le destructeur. Mais hormis ces cas critiques, c'est un idiome particulièrement pratique et puissant, alors usez-en et abusez-en !
 
