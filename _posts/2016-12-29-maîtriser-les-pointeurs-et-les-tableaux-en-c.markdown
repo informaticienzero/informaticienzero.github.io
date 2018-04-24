@@ -4,7 +4,7 @@ title: "Maîtriser les pointeurs et les tableaux en C"
 date: 2016-12-29 15:42:49
 permalink: /:title/
 ---
-Je n'écris plus en C depuis quelques temps, c'est bien vrai. Mais ça reste quand même le premier langage que j'ai appris. Et je me rappelle, comme beaucoup, avoir eu quelques difficultés avec les pointeurs. Non pas les pointeurs simples, mais les trucs exotiques, comme les **pointeurs de pointeurs**, les **tableaux de pointeurs**, les** pointeurs sur tableaux**, les **tableaux à plusieurs dimensions**, etc.
+Je n'écris plus en C depuis quelques temps, c'est bien vrai. Mais ça reste quand même le premier langage que j'ai appris. Et je me rappelle, comme beaucoup, avoir eu quelques difficultés avec les pointeurs. Non pas les pointeurs simples, mais les trucs exotiques, comme les **pointeurs de pointeurs**, les **tableaux de pointeurs**, les **pointeurs sur tableaux**, les **tableaux à plusieurs dimensions**, etc.
 
 <!--excerpt-->
 
